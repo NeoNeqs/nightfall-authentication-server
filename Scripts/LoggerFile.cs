@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-namespace AuthenticationServer.Scripts
+namespace NightFallAuthenticationServer.Scripts
 {
     /// Wrapper around Godot.File class. Manages creation, rotation and deletion of files. Does cyclic writes of information to a disk.
     public sealed class LoggerFile

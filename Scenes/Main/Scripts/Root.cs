@@ -1,31 +1,34 @@
 using Godot;
-using AuthenticationServer.Scripts.AutoLoad;
+using NightFallAuthenticationServer.Scripts.AutoLoad;
 
-public class Root : Node
+namespace NightFallAuthenticationServer.Scenes.Main.Scritps
 {
-    [Remote]
-    private void AuthenticateGateway(string token)
+    public class Root : Node
     {
-        if (token != OS.GetEnvironment("GATEWAY_TOKEN"))
+        [Remote]
+        private void AuthenticateGateway(string token)
         {
-            Server.Singleton.DisconnectPeer(Server.Singleton.GetRpcSenderId(), true);
+            if (token != OS.GetEnvironment("GATEWAY_TOKEN"))
+            {
+                Server.Singleton.DisconnectPeer(Server.Singleton.GetRpcSenderId(), true);
+            }
+            else
+            {
+                Server.Singleton.AddGateway(Server.Singleton.GetRpcSenderId());
+            }
         }
-        else
-        {
-            Server.Singleton.AddGateway(Server.Singleton.GetRpcSenderId());
-        }
-    }
 
-    [Remote]
-    private void AuthenticateGameServer(string token)
-    {
-        if (token != OS.GetEnvironment("GAME_SERVER_TOKEN"))
+        [Remote]
+        private void AuthenticateGameServer(string token)
         {
-            Server.Singleton.DisconnectPeer(Server.Singleton.GetRpcSenderId(), true);
-        }
-        else
-        {
-            Server.Singleton.AddGameServer(Server.Singleton.GetRpcSenderId());
+            if (token != OS.GetEnvironment("GAME_SERVER_TOKEN"))
+            {
+                Server.Singleton.DisconnectPeer(Server.Singleton.GetRpcSenderId(), true);
+            }
+            else
+            {
+                Server.Singleton.AddGameServer(Server.Singleton.GetRpcSenderId());
+            }
         }
     }
 }

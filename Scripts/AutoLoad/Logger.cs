@@ -1,7 +1,7 @@
 
 using Godot;
 
-namespace AuthenticationServer.Scripts.AutoLoad
+namespace NightFallAuthenticationServer.Scripts.AutoLoad
 {
     public sealed class Logger : Node
     {

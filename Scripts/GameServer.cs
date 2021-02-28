@@ -1,4 +1,4 @@
-namespace AuthenticationServer.Scripts
+namespace NightFallAuthenticationServer.Scripts
 {
     public class GameServer
     {

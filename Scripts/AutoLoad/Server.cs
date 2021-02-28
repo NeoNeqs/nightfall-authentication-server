@@ -1,9 +1,9 @@
 using Godot;
 using Godot.Collections;
 
-using AuthenticationServer.Scripts.Singleton;
+using NightFallAuthenticationServer.Scripts.Singleton;
 
-namespace AuthenticationServer.Scripts.AutoLoad
+namespace NightFallAuthenticationServer.Scripts.AutoLoad
 {
     public sealed class Server : Node
     {

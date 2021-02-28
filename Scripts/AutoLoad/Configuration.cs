@@ -1,7 +1,7 @@
-using AuthenticationServer.Scripts.AutoLoad;
+using NightFallAuthenticationServer.Scripts.AutoLoad;
 using Godot;
 
-namespace AuthenticationServer.Scripts.Singleton
+namespace NightFallAuthenticationServer.Scripts.Singleton
 {
     public sealed class Configuration : Node
     {
