@@ -1,0 +1,45 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="NightFall Authentication Server"
+run/main_scene="res://Scenes/Main/Main.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Logger="*res://Scripts/AutoLoad/Logger.cs"
+Configuration="*res://Scripts/AutoLoad/Configuration.cs"
+Server="*res://Scripts/AutoLoad/Server.cs"
+
+[display]
+
+window/size/width=600
+window/size/height=0
+
+[logging]
+
+file_logging/enable_file_logging.pc=false
+file_logging/log_path=""
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=0
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+quality/shadows/filter_mode=0
+environment/default_environment="res://default_env.tres"
