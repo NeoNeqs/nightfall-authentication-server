@@ -43,7 +43,11 @@ Same as before you need to put those files at `user://` for both [NightFall Gate
 
 ## Deployment
 
-This application will be run on K8s cluster in the future.
+This application will be run on K8s cluster in the future
+
+## Development
+
+Editing the project was tested only on Windows. Don't know if the project runs on other platform.
 
 ## License
 
