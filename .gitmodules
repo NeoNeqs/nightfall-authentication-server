@@ -1,0 +1,3 @@
+[submodule "Addons\\Servers Utils"]
+	path = Addons\\Servers Utils
+	url = https://github.com/NeqsTech/nightfall-servers-utils

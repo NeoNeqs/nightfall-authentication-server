@@ -10,11 +10,11 @@ namespace NightFallAuthenticationServer.Scenes.Main.Scritps
         {
             if (token != OS.GetEnvironment("GATEWAY_TOKEN"))
             {
-                Server.Singleton.DisconnectPeer(Server.Singleton.GetRpcSenderId(), true);
+                NetworkedServer.Singleton.DisconnectPeer(NetworkedServer.Singleton.GetRpcSenderId(), true);
             }
             else
             {
-                Server.Singleton.AddGateway(Server.Singleton.GetRpcSenderId());
+                NetworkedServer.Singleton.AddGateway(NetworkedServer.Singleton.GetRpcSenderId());
             }
         }
 
@@ -23,11 +23,11 @@ namespace NightFallAuthenticationServer.Scenes.Main.Scritps
         {
             if (token != OS.GetEnvironment("GAME_SERVER_TOKEN"))
             {
-                Server.Singleton.DisconnectPeer(Server.Singleton.GetRpcSenderId(), true);
+                NetworkedServer.Singleton.DisconnectPeer(NetworkedServer.Singleton.GetRpcSenderId(), true);
             }
             else
             {
-                Server.Singleton.AddGameServer(Server.Singleton.GetRpcSenderId());
+                NetworkedServer.Singleton.AddGameServer(NetworkedServer.Singleton.GetRpcSenderId());
             }
         }
     }

@@ -16,9 +16,9 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Logger="*res://Scripts/AutoLoad/Logger.cs"
-Configuration="*res://Scripts/AutoLoad/Configuration.cs"
-Server="*res://Scripts/AutoLoad/Server.cs"
+Logger="*res://Addons/Servers Utils/Scripts/AutoLoad/Logger.cs"
+ServerConfiguration="*res://Scripts/AutoLoad/ServerConfiguration.cs"
+NetworkedServer="*res://Scripts/AutoLoad/NetworkedServer.cs"
 
 [display]
 
