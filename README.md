@@ -35,7 +35,8 @@ You also need to generate self-signed certifiacte and a private key.
 $ openssl req -new -newkey rsa:4096 -nodes -x509 -keyout basic.key -out basic.crt
 ```
 
-Put `basic.key` and `basic.crt` at `user://`. On linux it's `~/.local/share/godot/app_userdata/NightFall Authentication Server/DTLS/`.
+Place `basic.key` and `basic.crt` at `user://`.  
+On linux it's `~/.local/share/godot/app_userdata/NightFall Authentication Server/DTLS/`.
 
 Same as before you need to put those files at `user://` for both [NightFall Gateway Server](https://github.com/NeqsTech/nightfall-gateway-server) and [NightFall GameWorld Server](https://github.com/NeqsTech/nightfall-gameworld-server). The specific instructions can be found at: TODO
 
@@ -46,6 +47,6 @@ This application will be run on K8s cluster in the future.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
