@@ -1,6 +1,6 @@
-using NightFallServersUtils.Scripts.Configurations;
+using ServersUtils.Scripts.Configurations;
 
-namespace NightFallAuthenticationServer.Scripts.AutoLoad
+namespace AuthenticationServer.Scripts.AutoLoad
 {
     public sealed class ServerConfiguration : StandartServerConfiguration
     {

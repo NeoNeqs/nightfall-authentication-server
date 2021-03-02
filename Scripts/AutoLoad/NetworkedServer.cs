@@ -1,8 +1,10 @@
 using Godot.Collections;
-using NightFallServersUtils.Scripts.Logging;
-using NightFallServersUtils.Scripts.Services;
 
-namespace NightFallAuthenticationServer.Scripts.AutoLoad
+using ServersUtils.Scripts.Logging;
+using ServersUtils.Scripts.Services;
+
+
+namespace AuthenticationServer.Scripts.AutoLoad
 {
     public class NetworkedServer : NetworkedServerService
     {

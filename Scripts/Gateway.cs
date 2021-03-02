@@ -1,4 +1,4 @@
-namespace NightFallAuthenticationServer.Scripts
+namespace AuthenticationServer.Scripts
 {
     public class Gateway
     {
