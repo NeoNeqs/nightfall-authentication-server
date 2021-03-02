@@ -1,12 +1,12 @@
-using NightFallServersUtils.Scripts.AutoLoad;
+using NightFallServersUtils.Scripts.Configurations;
 
 namespace NightFallAuthenticationServer.Scripts.AutoLoad
 {
-    public sealed class ServerConfiguration : DefaultServerConfiguration
+    public sealed class ServerConfiguration : StandartServerConfiguration
     {
         private static ServerConfiguration _singleton;
         public static ServerConfiguration Singleton => _singleton;
-        public ServerConfiguration()
+        public ServerConfiguration() : base()
         {
             _singleton = this;
         }
