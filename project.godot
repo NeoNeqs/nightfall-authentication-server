@@ -16,9 +16,10 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Logger="*res://Addons/Servers Utils/Scripts/AutoLoad/Logger.cs"
-ServerConfiguration="*res://Scripts/AutoLoad/ServerConfiguration.cs"
+Logger="*res://Addons/Servers Utils/Scripts/Logging/Logger.cs"
+ValidatorService="*res://Addons/Servers Utils/Scripts/Services/Validators/ValidatorService.cs"
 NetworkedServer="*res://Scripts/AutoLoad/NetworkedServer.cs"
+ServerConfiguration="*res://Scripts/AutoLoad/ServerConfiguration.cs"
 
 [display]
 
