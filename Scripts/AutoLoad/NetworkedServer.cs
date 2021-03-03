@@ -1,3 +1,4 @@
+using Godot;
 using Godot.Collections;
 
 using ServersUtils.Scripts.Logging;
@@ -13,6 +14,7 @@ namespace AuthenticationServer.Scripts.AutoLoad
         private Dictionary<int, Gateway> _gateways;
         private Dictionary<int, GameServer> _gameServers;
 
+
         private NetworkedServer() : base()
         {
             _singleton = this;
@@ -22,7 +24,11 @@ namespace AuthenticationServer.Scripts.AutoLoad
 
         public override void _EnterTree()
         {
-            base._EnterTree();
+            var error = SetupDTLS("user://DTLS/");
+            if (error != Error.Ok)
+            {
+                ServerLogger.GetLogger().Error($"An error has occurred while setting up DTLS. Error code: {error}");
+            }
             GetTree().Connect("network_peer_connected", this, nameof(PeerConnected));            
             GetTree().Connect("network_peer_disconnected", this, nameof(PeerDisconnected));
         }
@@ -46,12 +52,22 @@ namespace AuthenticationServer.Scripts.AutoLoad
 
         private void PeerConnected(int id)
         {
-            Logger.Server.Info($"Peer {id} connected");
+            ServerLogger.GetLogger().Info($"Peer {id} connected");
         }
 
         private void PeerDisconnected(int id)
         {
-            Logger.Server.Info($"Peer {id} disconnected");
+            ServerLogger.GetLogger().Info($"Peer {id} disconnected");
+        }
+
+        protected override string GetCryptoKeyName()
+        {
+            return "ag.key";
+        }
+
+        protected override string GetCertificateName()
+        {
+            return "ag.crt";
         }
     }
 }
