@@ -1,0 +1,87 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[application]
+
+config/name="NightFall Authentication Server"
+run/main_scene="res://Scenes/Main/Main.tscn"
+config/icon="res://icon.png"
+run/max_buffer_count=100
+
+[autoload]
+
+ValidatorService="res://Addons/Servers Utils/Scripts/Services/Validators/ValidatorService.cs"
+ServerConfiguration="res://Scripts/AutoLoad/ServerConfiguration.cs"
+DataBase="res://Scripts/AutoLoad/DataBase.cs"
+InternalNetwork="res://Scripts/AutoLoad/InternalNetwork.cs"
+
+[debug]
+
+settings/stdout/verbose_stdout=true
+
+[display]
+
+window/size/width=600
+window/size/height=0
+
+[logging]
+
+file_logging/enable_file_logging=true
+file_logging/log_path="user://godot_logs/godot.log"
+file_logging/max_log_files=10
+
+[mono]
+
+debugger_agent/port=23686
+
+[network]
+
+limits/debugger_stdout/max_chars_per_second=4096
+limits/debugger_stdout/max_messages_per_frame=20
+limits/debugger_stdout/max_errors_per_second=200
+limits/debugger_stdout/max_warnings_per_second=200
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+quality/intended_usage/framebuffer_allocation=1
+quality/intended_usage/framebuffer_allocation.mobile=1
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+quality/directional_shadow/size=256
+quality/directional_shadow/size.mobile=256
+quality/shadow_atlas/size=256
+quality/shadow_atlas/size.mobile=256
+quality/shadow_atlas/quadrant_0_subdiv=0
+quality/shadow_atlas/quadrant_1_subdiv=0
+quality/shadow_atlas/quadrant_2_subdiv=0
+quality/shadow_atlas/quadrant_3_subdiv=0
+quality/shadows/filter_mode=0
+quality/reflections/texture_array_reflections=false
+quality/reflections/high_quality_ggx=false
+quality/reflections/irradiance_max_size=32
+quality/shading/force_vertex_shading.mobile=false
+quality/shading/force_lambert_over_burley.mobile=false
+quality/shading/force_blinn_over_ggx.mobile=false
+quality/depth_prepass/enable=false
+quality/reflections/atlas_size=0
+quality/reflections/atlas_subdiv=0
+environment/default_environment="res://default_env.tres"
+quality/filters/anisotropic_filter_level=1
+quality/2d/use_software_skinning=false

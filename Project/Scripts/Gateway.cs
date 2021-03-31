@@ -1,4 +1,6 @@
-namespace AuthenticationServer.Scripts
+using Godot;
+
+namespace AuthenticationServer
 {
     public class Gateway
     {

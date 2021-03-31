@@ -1,7 +1,8 @@
 using Godot;
 
-using ServersUtils.Scripts.Configurations;
-using ServersUtils.Scripts.Logging;
+using ServersUtils.Configurations;
+
+using SharedUtils.Common;
 
 namespace AuthenticationServer.Scripts.AutoLoad
 {
@@ -19,9 +20,9 @@ namespace AuthenticationServer.Scripts.AutoLoad
         public override void _EnterTree()
         {
             var error = LoadConfiguration();
-            if (error != Error.Ok)
+            if (error != ErrorCode.Ok)
             {
-                ServerLogger.GetLogger().Error($"Could not load configuration file {Path}. Error code: {error}");
+                //GD.LogError($"Could not load configuration file {Path}. Error code: {error}");
             }
         }
 
@@ -38,9 +39,9 @@ namespace AuthenticationServer.Scripts.AutoLoad
         public override void _ExitTree()
         {
             var error = SaveConfiguration();
-            if (error != Error.Ok)
+            if (error != ErrorCode.Ok)
             {
-                ServerLogger.GetLogger().Error($"Could not save configuration file. Error code: {error}");
+                //GD.LogError($"Could not save configuration file. Error code: {error}");
             }
         }
     }
