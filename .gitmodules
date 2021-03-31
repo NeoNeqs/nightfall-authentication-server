@@ -1,6 +1,9 @@
-[submodule "Addons\\Servers Utils"]
-	path = Addons\\Servers Utils
+[submodule "Project\\Addons\\Servers Utils"]
+	path = Project\\Addons\\Servers Utils
 	url = https://github.com/NeqsTech/nightfall-servers-utils
-[submodule "Addons/Shared Utils"]
-	path = Addons/Shared Utils
+[submodule "Project/Addons/Shared Utils"]
+	path = Project/Addons/Shared Utils
 	url = https://github.com/NeqsTech/nightfall-shared-utils
+[submodule "Native/GodotCpp"]
+	path = Native/GodotCpp
+	url = https://github.com/godotengine/godot-cpp
