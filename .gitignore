@@ -18,3 +18,6 @@ Project/Bin/
 .vscode/
 vc140.idb
 vc140.pdb
+
+# Scons
+.sconsign.dblite
